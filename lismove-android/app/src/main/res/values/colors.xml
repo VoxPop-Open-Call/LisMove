@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="red_main">#d80011</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="light_gray">#e0e0e0</color>
+    <color name="tab_background">#f2f2f2</color>
+    <color name="gray_image_tint">#686868</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="AccentColor">#FFE20613</color>
+    <color name="userPositionBackground">#25686868</color>
+    <color name="ComplementColor">#FF525ABB</color>
+    <color name="BaseTextColor">#FF666666</color>
+    <color name="ListViewSelectedItemBackgroundColor">#44DA125F</color>
+    <color name="SplashBackgroundColor">#FFE20613</color>
+    <color name="PrimaryDarkColor">#FFA70000</color>
+    <color name="PolylineColor">#FF5F40</color>
+    <color name="yellowColor">#F9A01B</color>
+    <color name="yellowColor2">#FFBC33</color>
+    <color name="green">#689f38</color>
+    <color name="GreenColor2">#34AD3D</color>
+
+    <color name="alertBackgroundDark">#DF333333</color>
+    <color name="chipBackgroundDark">#383838</color>
+    <color name="alwaysOnchipBackgroundDark">#D5383838</color>
+    <color name="chipBackgroundLight">#e5e5e5</color>
+
+
+    <color name="textDark">#c9c9c9</color>
+    <color name="textLight">#B2FFFFFF</color>
+
+
+</resources>

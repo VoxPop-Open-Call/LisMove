@@ -1,0 +1,8 @@
+.filepond--root,
+.filepond--root .filepond--drop-label {
+    width: auto;
+    height: 13rem;
+}
+.filepond--credits{
+    display: none;
+}

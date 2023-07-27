@@ -1,0 +1,10 @@
+export const MANDATORY = "Campo obbligatorio";
+export const INVALID_URL = "Indirizzo web non valido";
+export const INVALID_PHONE = "Numero non valido";
+export const INVALID_VAT = "Partita iva non valida";
+export const PASSWORD_NOT_MATCH = "Le password non coincidono";
+export const INVALID_IBAN = "IBAN non valido";
+export const ERROR_FORM = "Ci sono degli errori nella compilazione del form";
+export const CREATION_ERROR_VENDOR = "Errore creazione dell' esercente";
+export const NEW_EMAIL_ERROR = "Errore salvataggio nuova mail";
+export const INCORRECT_PASSWORD = "La password non è corretta";

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <property name="LOG_PATTERN" value="%d{yyyy-MM-dd'T'HH:mm:ss.SSSZ} %p %c{25} %m%n"/>
+    <!--    <property name="APP_LOG_ROOT" value="/var/log/tomcat"/>-->
+    <!--    <if condition='isDefined("catalina.home")'>-->
+    <!--        <then>-->
+    <!--            <property name="APP_LOG_ROOT" value="${catalina.home}/logs"/>-->
+    <!--        </then>-->
+    <!--        <else>-->
+    <!--            <property name="APP_LOG_ROOT" value="/var/log/tomcat"/>-->
+    <!--        </else>-->
+    <!--    </if>-->
+    <property name="APP_LOG_ROOT" value="${catalina.home}/logs"/>
+    <appender name="console"
+              class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="applicationLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${APP_LOG_ROOT}/application.log</file>
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- daily rollover -->
+            <fileNamePattern>
+                ${APP_LOG_ROOT}/rotated/application.%d{yyyy-MM-dd}.log
+            </fileNamePattern>
+            <!-- keep 10 days' worth of history -->
+            <maxHistory>20</maxHistory>
+        </rollingPolicy>
+    </appender>
+
+    <appender name="errorsLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${APP_LOG_ROOT}/errors.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- daily rollover -->
+            <fileNamePattern>${APP_LOG_ROOT}/archived/errors.%d{yyyy-MM-dd}.log
+            </fileNamePattern>
+            <!-- keep 10 days' worth of history -->
+            <maxHistory>20</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="accessesLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${APP_LOG_ROOT}/accesses.log</file>
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- daily rollover -->
+            <fileNamePattern>${APP_LOG_ROOT}/rotated/accesses.%d{yyyy-MM-dd}.log
+            </fileNamePattern>
+            <!-- keep 10 days' worth of history -->
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+    </appender>
+
+    <logger name="net.nextome.lismove" level="DEBUG">
+        <appender-ref ref="applicationLog"/>
+    </logger>
+
+    <logger name="net.nextome.lismove.exception" level="debug">
+        <appender-ref ref="errorsLog"/>
+    </logger>
+
+    <logger name="net.nextome.lismove.security" level="info" additivity="false">
+        <appender-ref ref="accessesLog"/>
+    </logger>
+
+    <root level="info">
+        <appender-ref ref="console"/>
+    </root>
+</configuration>

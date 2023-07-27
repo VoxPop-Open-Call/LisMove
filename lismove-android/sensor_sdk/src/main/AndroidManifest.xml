@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="net.nextome.lismove_sdk">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application>
+        <activity android:name=".sensorUpgrade.DeviceUpgradeActivity" />
+
+        <receiver
+            android:name=".receiver.NewDeviceFoundReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="net.nextome.lismove_sdk.DEVICE_FOUND" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="androidx.work.impl.foreground.SystemForegroundService"
+            android:foregroundServiceType="location"
+            tools:node="merge" />
+        <service
+            android:name="com.onecoder.devicelib.base.control.manage.BluetoothLeService"
+            android:foregroundServiceType="location"
+            android:enabled="true" />
+
+        <service
+            android:name=".sensorUpgrade.LismoveDfuService"
+            android:enabled="true" />
+    </application>
+
+</manifest>

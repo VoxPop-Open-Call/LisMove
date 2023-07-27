@@ -1,0 +1,91 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '13.0'
+#source 'https://github.com/CocoaPods/Specs.git'
+
+def pods
+  #network
+  pod "Alamofire", '5.0.0'
+  #gps
+  pod 'SwiftLocation','~> 5.1.0'
+  #firebase
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
+  pod 'Firebase/Messaging'
+  pod 'Firebase/Crashlytics'
+  pod 'Firebase/Auth'
+  pod 'GoogleSignIn', '~> 5.0.2'
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
+  pod 'CodableFirebase'
+
+  #facebook
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
+  pod 'FacebookShare'
+  #system
+  pod 'Bugsnag'
+  pod 'SwiftLog', '~> 1.0.0'
+  pod 'RealmSwift', '~> 10.7.4'
+  pod 'Polyline', '~> 5.0'
+  pod 'CoreGPX'
+  pod 'AppFolder'
+  pod 'Mobilisten'
+  #ui
+  pod 'PKHUD', '~> 5.0'
+  pod 'Toast-Swift', '~> 5.0.1'
+  pod 'NVActivityIndicatorView', '~> 4.8.0'
+  pod 'Floaty', '~> 4.2.0'
+  pod 'LabelSwitch'
+  pod 'Cosmos', '~> 23.0'
+  pod 'FaveButton'
+  pod 'SkeletonView'
+  pod 'Gifu'
+  pod 'Kingfisher'
+  pod 'Charts'
+  pod 'SSSwiftUIGIFView', '~> 1.0'
+  pod 'TRMosaicLayout', '~> 1.0'
+  pod 'ToastUI'
+  pod "Sheeeeeeeeet"
+  pod 'PhoneNumberKit', '~> 3.3'
+  pod "Resolver"
+  pod "MaterialComponents/Cards"
+  pod 'MaterialComponents/ProgressView'
+  pod 'SwiftMessages'
+  pod 'iOSDFULibrary'
+  pod 'RxBluetoothKit', :git => 'https://github.com/i-mobility/RxBluetoothKit.git', :tag => '7.0.2'
+  pod 'SimpleCheckbox'
+  pod 'IQKeyboardManagerSwift'
+  pod 'CountryPickerView'
+  pod 'Siren', '~> 5.8.1'
+
+
+end
+
+target 'LisMove' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for LisMove
+  pods
+
+  target 'LisMoveTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'LisMoveUITests' do
+    # Pods for testing
+  end
+
+end
+
+target 'LisMoveSensorSdk' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for LisMoveSensorSdk
+
+end
+
+

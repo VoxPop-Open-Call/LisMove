@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" >
+
+    <it.lismove.app.android.general.ui.MenuItemView
+        android:id="@+id/profileHistoryMySession"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menuTitle="Le mie sessioni"
+        app:showArrow="true" />
+    <it.lismove.app.android.general.ui.MenuItemView
+        android:id="@+id/profileHistoryHomeWorkSession"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menuTitle="Le mie sessioni casa - scuola/lavoro"
+        app:showArrow="true"
+        />
+
+    <it.lismove.app.android.general.ui.MenuItemView
+        android:id="@+id/profileMyAwards"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menuTitle="I miei premi"
+        app:showArrow="true" />
+
+    <it.lismove.app.android.general.ui.MenuItemView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menuTitle="Comune"
+        app:showArrow="false"
+        app:leftImage="@drawable/ic_baseline_location"
+        app:rightTitle="Bari"
+        android:visibility="gone"/>
+
+
+</LinearLayout>

@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="16dp"
+    android:orientation="vertical"
+    android:textAlignment="center"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/toggle">
+
+    <it.lismove.app.android.general.ui.MenuItemView
+        android:id="@+id/termsAndConditionsMenuItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menuTitle="Termini e condizioni"
+        app:showArrow="true" />
+
+    <it.lismove.app.android.general.ui.MenuItemView
+        android:id="@+id/privacyPolicyMenuItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menuTitle="Privacy Policy"
+        app:showArrow="true" />
+
+    <it.lismove.app.android.general.ui.MenuItemView
+        android:id="@+id/creditsMenuItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menuTitle="Crediti"
+        app:showArrow="true" />
+
+    <it.lismove.app.android.general.ui.MenuItemView
+        android:id="@+id/mailMenuItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menuTitle="Contatta lo sviluppatore"
+        app:showArrow="true" />
+
+
+
+</LinearLayout>

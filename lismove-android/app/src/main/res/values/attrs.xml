@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="editTextView">
+        <attr name="hint" format="reference" />
+        <attr name="errorMessage" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="menuItemView">
+        <attr name="menuTitle" format="string" />
+        <attr name="rightTitle" format="string" />
+        <attr name="rightLabel" format="string" />
+        <attr name="showArrow" format="boolean" />
+        <attr name="showDivider" format="boolean" />
+        <attr name="leftImage" format="reference" />
+    </declare-styleable>
+</resources>

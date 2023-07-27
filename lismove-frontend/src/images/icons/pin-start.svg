@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="26px" viewBox="0 0 20 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>pin-start</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0 20 0 20 26 0 26"></polygon>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="pin-start">
+            <g id="Page-1">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-2"></g>
+                <path d="M10.0017179,0 C4.49063735,0 0,4.53775224 0,10.1109181 C0,14.172658 2.42226422,17.9772818 4.75863254,20.8125084 C7.09500086,23.6477349 9.43136918,25.5378859 9.43136918,25.5378859 L10.0017179,26 L10.5720667,25.5378859 C10.5720667,25.5378859 12.908435,23.6477349 15.2448033,20.8125084 C17.5811716,17.9772818 20,14.172658 20,10.1109181 C20,4.53775224 15.5127985,0 10.0017179,0" id="Fill-1" fill="#7ED321"></path>
+            </g>
+            <g id="noun_play_1939965-copy" transform="translate(7.000000, 5.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                <path d="M7.81449345,4.33010116 L1.30604347,0.13643244 C0.750974998,-0.221820666 0,0.168043009 0,0.810791229 L0,9.1875918 C0,9.84087688 0.750974998,10.2202037 1.30604347,9.86195059 L7.81449345,5.66828188 C8.30425976,5.36271305 8.30425976,4.64620684 7.81449345,4.33010116 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

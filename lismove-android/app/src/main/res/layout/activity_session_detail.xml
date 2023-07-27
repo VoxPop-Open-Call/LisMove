@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".session.ui.SessionDetailActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/sessionDetailToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <ProgressBar
+        android:layout_centerInParent="true"
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/sessionDetailToolbar"
+        android:layout_marginTop="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/feedBackRequestLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/gray_image_tint"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rankingTitleBar">
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="99"
+                        android:text="Segnala un problema"
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:id="@+id/imageView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                        app:tint="@color/white" />
+                </LinearLayout>
+
+
+                <it.lismove.app.android.general.ui.MenuItemView
+                    android:id="@+id/distanceView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:menuTitle="DISTANZA"
+                    app:rightLabel="Km"
+                    app:showArrow="false"
+                    tools:rightTitle="150" />
+
+                <it.lismove.app.android.general.ui.MenuItemView
+                    android:id="@+id/durationView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:menuTitle="DURATA"
+                    app:showArrow="false"
+                    tools:rightTitle="00:05:41" />
+
+                <it.lismove.app.android.general.ui.MenuItemView
+                    android:id="@+id/speedView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:menuTitle="VELOCITÀ MEDIA"
+                    app:rightLabel="Km/h"
+                    app:showArrow="false"
+                    app:showDivider="false"
+                    tools:rightTitle="14" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_rounded_top"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+
+                    <LinearLayout
+                        android:id="@+id/pointsLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:id="@+id/totalPointsLayout"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="8dp"
+                            tools:visibility="visible">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:id="@+id/totalInitiativePointLayout"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/totalnPointsInitiative"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="25dp"
+                                        android:layout_weight="1"
+                                        android:gravity="center_horizontal|center_vertical"
+                                        android:text="012 "
+                                        android:textStyle="bold"
+                                        android:visibility="gone" />
+
+                                    <ImageView
+                                        android:id="@+id/moreInitiativeTotalImage"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="25dp"
+                                        android:layout_weight="1"
+                                        app:srcCompat="@drawable/ic_baseline_touch_app_24"
+                                        app:tint="@color/gray_image_tint" />
+
+                                    <TextView
+                                        android:id="@+id/totalPointsInitiativeLabel"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="4dp"
+                                        android:layout_weight="1"
+                                        android:gravity="center_horizontal"
+                                        android:text="INIZIATIVA"
+                                        android:textSize="10sp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/totalPointsNational"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="25dp"
+                                        android:gravity="center_horizontal|center_vertical"
+                                        android:text="012 "
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/textView61"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="4dp"
+                                        android:gravity="center_horizontal"
+                                        android:text="COMMUNITY"
+                                        android:textSize="10sp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/pointsLabel"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="8dp"
+                                android:gravity="bottom|center_horizontal"
+                                android:text="PUNTI TOTALI" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/dividerLayout"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/light_gray"
+                            android:padding="2dp"
+                            tools:visibility="visible" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@color/transparent"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:id="@+id/sessionPointsInitiativeLayout"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/sessionPointsInitiative"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="25dp"
+                                        android:layout_weight="1"
+                                        android:gravity="center_horizontal|center_vertical"
+                                        android:text="012 "
+                                        android:textStyle="bold"
+                                        android:visibility="gone" />
+
+                                    <ImageView
+                                        android:id="@+id/moreInitiativeImage"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="25dp"
+                                        android:layout_weight="1"
+                                        app:srcCompat="@drawable/ic_baseline_touch_app_24"
+                                        app:tint="@color/gray_image_tint" />
+
+                                    <TextView
+                                        android:id="@+id/sessionPointsInitiativeLabel"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="4dp"
+                                        android:layout_weight="1"
+                                        android:gravity="center_horizontal"
+                                        android:text="INIZIATIVA"
+                                        android:textSize="10sp" />
+
+                                    <TextView
+                                        android:id="@+id/zeroInitiativePointsLabel"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_weight="1"
+                                        android:text="Perchè non ho ricevuto punti iniziativa?"
+                                        android:textAlignment="center"
+                                        android:textSize="10sp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/sessionPointsNational"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="25dp"
+                                        android:gravity="center_horizontal|center_vertical"
+                                        android:text="012 "
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/textView6"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="4dp"
+                                        android:gravity="center_horizontal"
+                                        android:text="COMMUNITY"
+                                        android:textSize="10sp" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/textView31"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="PUNTI SESSIONE" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/errorLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="16dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="8dp">
+
+                        <ImageView
+                            android:id="@+id/infoMessageImage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="16dp"
+                            android:src="@drawable/ic_baseline_error_outline_24"
+                            app:tint="@color/AccentColor" />
+
+                        <TextView
+                            android:id="@+id/errorMessage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="La sessione non è valida" />
+                    </LinearLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/refundLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textView18"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:text="RIMBORSO OTTENUTO"
+                            app:layout_constraintBottom_toBottomOf="@+id/refundEuro"
+                            app:layout_constraintEnd_toStartOf="@+id/refundEuro"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/refundEuro" />
+
+                        <TextView
+                            android:id="@+id/refundEuro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="8dp"
+                            android:fontFamily="@font/open_sans_extrabold"
+                            android:text="50"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toStartOf="@+id/textView21"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView21"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="24dp"
+                            android:text="euro"
+                            app:layout_constraintBottom_toBottomOf="@+id/refundEuro"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/refundEuro" />
+
+                        <TextView
+                            android:id="@+id/refundString"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="24dp"
+                            android:layout_marginBottom="16dp"
+                            android:text="MUVT - COMUNE DI BARI: Parzialmente a riconosciuto per raggiungimento soglia giornaliera"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/textView18"
+                            app:layout_constraintTop_toBottomOf="@+id/textView18" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <Button
+                        android:id="@+id/debugSendManually"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Invia manualmente"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp">
+
+                    <Button
+                        android:id="@+id/gpxButton"
+                        style="@style/Widget.MaterialComponents.Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|end"
+                        android:layout_margin="8dp"
+                        android:text="Save GPX" />
+
+                    <fragment
+                        android:id="@+id/map"
+                        android:name="it.lismove.app.android.session.ui.view.NestedScrollMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </FrameLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

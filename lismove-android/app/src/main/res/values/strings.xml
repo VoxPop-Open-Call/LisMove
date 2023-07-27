@@ -1,0 +1,72 @@
+<resources>
+    <!-- <string name="app_name">Lis Move v2</string>-->
+    <string name="signUp">ISCRIVITI</string>
+    <string name="signIn">ACCEDI</string>
+    <string name="signUpFacebook">ISCRIVITI CON FACEBOOK</string>
+    <string name="signupGoogle">ISCRIVITI CON GOOGLE</string>
+    <string name="accountConfigurationTitle">Configura il tuo account</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="confirmPassword">Conferma password</string>
+    <string name="emailConfirmationDescription">Conferma il tuo indirizzo email cliccando sul link che ti abbiamo inviato all\'indirizzo di posta %1$s</string>
+    <string name="facebook_app_id"> </string>
+    <string name="fb_login_protocol_scheme"> </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="preference_file_key">pin_bike_shared_prefs</string>
+    <string name="permission_denied_rationale">LisMove ha bisogno del Bluetooth per funzionare. Acconsenti all\'utilizzo del bluetooth e riprova.</string>
+    <string name="permission_request_rationale">Per utilizzare LisMove, acconsenti all\'utilizzo della posizione e del bluetooth.</string>
+    <string name="permission_background_request_rationale">Per raccogliere dati anche a telefono spento, acconsenti a utilizzare la tua posizione in background nella prossima schermata.</string>
+    <string name="permission_background_denied_rationale">Lismove non potrà seguire il tuo percorso mentre il telefono è spento finchè non accetti il permesso.</string>
+    <string name="title_activity_maps">Mappa</string>
+    <string name="session_manager_initiative_points">Punti\niniziativa(x%1$s)</string>
+    <string name="session_manager_multiplier_number">Moltiplicatori\nattivi %1$s</string>
+    <string name="error_session_in_progress">Terminare la sessione attiva prima di configurare il sensore</string>
+    <string name="riconfigure_car_button_label">Riconfigura la tua automobile</string>
+    <string name="configure_car_button_label">Configura la tua automobile</string>
+    <string name="setting_alert_new_session_auto">Alla connessione con il sensore, non inviare una notifica, avvia la sessione automaticamente senza ulteriore consenso</string>
+    <string name="settings_alert_new_session">Avvisami quando posso avviare una sessione</string>
+    <string name="alert_detect_new_session_title">Avvisami quando posso avviare una sessione</string>
+    <string name="alert_detect_new_session_desc">LisMove rileverà sensori attivi nelle vicinanze, anche quando è chiuso.
+                Sarà mostrata una notifica persistente che segnala che l\'app è in esecuzione e cercherà periodicamente dispositivi bluetooth nelle vicinanze.
+
+                Se verrà rilevato il tuo sensore attivo nelle vicinanze, riceverai una notifica per poter iniziare velocemente una sessione.
+                La sessione deve sempre essere terminata manualmente.</string>
+    <string name="button_ok">OK</string>
+    <string name="button_cancel">Annulla</string>
+    <string name="session_sensor_not_paired">Nessun sensore associato, accendi il tuo sensore LisMove ed esegui il pairing</string>
+    <string name="sensor_not_detected">Nessun sensore rilevato</string>
+    <string name="sensor_not_connected">Non connesso</string>
+    <string name="pair_again">Riassocia</string>
+    <string name="title_activity_awards">AwardsActivity</string>
+    <string name="session_empty_label">Nessuna %1$s presente</string>
+    <string name="session_pause">Pausa</string>
+    <string name="session_stop_and_send">Termina e invia</string>
+    <string name="session_resume">Riprendi</string>
+    <string name="session_send">Invia</string>
+    <string name="session_hide_cruscotto">Nascondi cruscotto</string>
+    <string name="session_show_cruscotto">Mostra cruscotto</string>
+    <string name="pin_position_explaination">Tieni premuto sul marker e spostalo nella posizione corretta</string>
+    <string name="title_activity_awards_wrapper">AwardsWrapper</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+
+
+    <string name="picker_app_name">Lis Move</string>
+    <string name="picker_gallery">Galleria</string>
+    <string name="picker_camera">Fotocamera</string>
+    <string name="picker_select">Seleziona</string>
+    <string name="picker_media_permissions_hint">Concedi l\'autorizzazione ai media per un accesso più semplice alla galleria</string>
+    <string name="picker_empty_media">La tua galleria è vuota</string>
+    <string name="picker_allow">Consenti</string>
+    <string name="picker_select_photo">Seleziona una foto</string>
+    <string name="picker_no_camera">Nessuna app di fotocamera trovata</string>
+    <plurals name="picker_selected_count">
+        <item quantity="one">%d foto selezionata</item>
+        <item quantity="other">%d foto selezionate</item>
+    </plurals>
+    <plurals name="picker_max_selection_reached">
+        <item quantity="one">Puoi selezionare solo %d immmagine</item>
+        <item quantity="other">Puoi selezionare solo %d immagini</item>
+    </plurals>
+</resources>

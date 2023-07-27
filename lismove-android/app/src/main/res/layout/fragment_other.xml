@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="16dp"
+    android:orientation="vertical"
+    android:textAlignment="center"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/toggle">
+
+    <it.lismove.app.android.general.ui.MenuItemView
+        android:id="@+id/initiativeCodeMenuItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:leftImage="@drawable/ic_outline_input_24"
+        app:menuTitle="Gestione iniziative"
+        app:showArrow="true" />
+
+    <it.lismove.app.android.general.ui.MenuItemView
+        android:id="@+id/sensorMenuItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:leftImage="@drawable/ic_baseline_bluetooth_24"
+        app:menuTitle="Gestione sensore"
+        app:showArrow="true" />
+
+    <it.lismove.app.android.general.ui.MenuItemView
+        android:id="@+id/car_menu_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:leftImage="@drawable/ic_outline_directions_car_24"
+        app:menuTitle="Registrazione automobile per calcolo co2 risparmiata"
+        app:showArrow="true" />
+
+    <it.lismove.app.android.general.ui.MenuItemView
+        android:id="@+id/profileMenuItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:leftImage="@drawable/ic_baseline_person_outline_24"
+        app:menuTitle="Profilo"
+        app:showArrow="true" />
+
+    <it.lismove.app.android.general.ui.MenuItemView
+        android:id="@+id/helpAndFaqMenuItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:leftImage="@drawable/ic_outline_live_help_24"
+        app:menuTitle="Aiuto e FAQ"
+        app:showArrow="true" />
+    <!--About will contain Privacy Policy, Crediti Termini di utilizzo -->
+
+    <it.lismove.app.android.general.ui.MenuItemView
+        android:id="@+id/settingsMenuItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:leftImage="@drawable/ic_baseline_settings_24"
+        app:menuTitle="Impostazioni"
+        app:showArrow="true" />
+
+    <it.lismove.app.android.general.ui.MenuItemView
+        android:id="@+id/infoAndConditionsMenuItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:leftImage="@drawable/ic_outline_info_24"
+        app:menuTitle="Info e Condizioni"
+        android:visibility="visible"
+        app:showArrow="true" >
+
+    </it.lismove.app.android.general.ui.MenuItemView>
+
+
+
+    <TextView
+        android:id="@+id/versionNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="500"
+        android:gravity="bottom|center_horizontal"
+        android:text="LisMove v0.0.1"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+</LinearLayout>

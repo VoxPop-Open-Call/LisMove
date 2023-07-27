@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="un_stpes_walk">Disconnected</string>
+    <string name="device_connecting">Connecting</string>
+    <string name="stpes_walk">Connected</string>
+    <string name="scan_dev">Scan device</string>
+    <string name="unconnected">Disconnected</string>
+    <string name="connected">Connected</string>
+    <string name="string_searching">Scanning for devices</string>
+    <string name="dialog_connecting">Connecting to device</string>
+    <string name="notification_channel_id">lismove_notification_channel</string>
+    <string name="notification_title">LisMove Connesso</string>
+    <string name="notification_content">Connesso al sensore</string>
+    <string name="notification_channel_name">LisMove Notifications</string>
+    <string name="notification_channel_id_lowpriority">LisMove Low Priority Notifications</string>
+</resources>

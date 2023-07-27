@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".settings.SettingsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/textEntryPadding"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:text="Impostazioni tema"/>
+
+        <com.kyleduo.switchbutton.SwitchButton
+            android:id="@+id/themeSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="8sp"
+            app:kswTextExtra="8dp"
+            app:kswTextOff="DAYMODE"
+            app:kswTextOn="NIGHTMODE"
+            app:kswThumbColor="@color/white"
+            app:kswThumbDrawable="@drawable/ic_sun2"
+            app:kswThumbHeight="32dp"
+            app:kswThumbWidth="32dp"
+            app:kswTintColor="@color/red_main"
+            app:layout_constraintBottom_toBottomOf="@+id/sensorChip"
+            app:layout_constraintEnd_toStartOf="@+id/bluetoothIndicator"
+            app:layout_constraintTop_toTopOf="@+id/sensorChip" />
+
+    </LinearLayout>
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        layout="@layout/view_divider"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/delayLayout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/textEntryPadding">
+
+        <TextView
+            android:id="@+id/menuTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_vertical"
+            android:minHeight="30dp"
+            android:text="Intervallo misurazioni"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/delayInSecondsTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/delayInSecondsTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="0"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/rightLabel"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/rightImageView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
+        <TextView
+            android:id="@+id/rightLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="sec"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/rightImageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_gray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/textEntryPadding"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_alert_new_session"/>
+
+        <com.kyleduo.switchbutton.SwitchButton
+            android:id="@+id/backgroundScanEnabled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:textSize="8sp"
+            app:kswTextExtra="8dp"
+            app:kswThumbColor="@color/white"
+            app:kswThumbHeight="32dp"
+            app:kswThumbWidth="32dp"
+            app:kswTintColor="@color/red_main"
+            app:layout_constraintBottom_toBottomOf="@+id/sensorChip"
+            app:layout_constraintEnd_toStartOf="@+id/bluetoothIndicator"
+            app:layout_constraintTop_toTopOf="@+id/sensorChip" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_gray" />
+    <LinearLayout
+        android:id="@+id/backgroundScanAutomaticEnabledLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:padding="@dimen/textEntryPadding"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:text="@string/setting_alert_new_session_auto"/>
+
+        <com.kyleduo.switchbutton.SwitchButton
+            android:id="@+id/backgroundScanAutomaticEnabled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:textSize="8sp"
+            app:kswTextExtra="8dp"
+            app:kswThumbColor="@color/white"
+            app:kswThumbHeight="32dp"
+            app:kswThumbWidth="32dp"
+            app:kswTintColor="@color/red_main"
+            app:layout_constraintBottom_toBottomOf="@+id/sensorChip"
+            app:layout_constraintEnd_toStartOf="@+id/bluetoothIndicator"
+            app:layout_constraintTop_toTopOf="@+id/sensorChip" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lismoveLogo" />
+
+</LinearLayout>

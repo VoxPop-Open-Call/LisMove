@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/nav_menu_home"
+        android:title="Home"
+        android:icon="@drawable/ic_home"/>
+    <item
+        android:id="@+id/nav_menu_map"
+        android:title="Mappa"
+        android:icon="@drawable/ic_map"/>
+    <item
+        android:id="@+id/nav_menu_gaming"
+        android:title="Gaming"
+        app:actionViewClass="android.widget.Button"
+        android:checkable="false"
+        android:icon="@drawable/ic_gaming"/>
+    <item
+        android:id="@+id/nav_menu_log_wall"
+        android:title="Log Wall"
+        android:icon="@drawable/ic_logwall"/>
+
+    <item
+        android:id="@+id/nav_menu_other"
+        android:title="Altro"
+        android:icon="@drawable/ic_other"/>
+</menu>

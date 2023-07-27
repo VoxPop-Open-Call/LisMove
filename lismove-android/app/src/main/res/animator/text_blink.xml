@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:anim/overshoot_interpolator"
+    android:ordering="sequentially"
+    >
+    <objectAnimator
+        android:startOffset="1000"
+        android:propertyName="textColor"
+        android:duration="1"
+        android:valueFrom="@color/black"
+        android:valueTo="@color/yellowColor2"
+/>
+    <objectAnimator
+        android:startOffset="1000"
+        android:propertyName="textColor"
+        android:duration="1"
+        android:valueFrom="@color/yellowColor2"
+        android:valueTo="@color/black"
+        />
+
+</set>

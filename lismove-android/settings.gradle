@@ -1,0 +1,6 @@
+rootProject.name = "Lis Move"
+include ':app'
+include ':sensor_sdk'
+include ':room'
+include ':common'
+include ':utils'

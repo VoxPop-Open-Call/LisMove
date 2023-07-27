@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <it.lismove.app.android.general.ui.MenuItemView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:leftImage="@drawable/ic_baseline_person_24"
+        app:menuTitle="Anagrafica"
+        app:showArrow="true"
+        />
+    <it.lismove.app.android.general.ui.MenuItemView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:leftImage="@drawable/ic_baseline_code_24"
+        app:menuTitle="Codice iniziativa"
+        app:showArrow="true"
+        />
+    <it.lismove.app.android.general.ui.MenuItemView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:leftImage="@drawable/ic_notification_session"
+        app:menuTitle="Gestione sensore"
+        app:showArrow="true"
+        />
+
+</LinearLayout>
